@@ -8,3 +8,4 @@ pbminuto = rapidez_lector(200,40)
 
 print(tiempo_pagina(800,pbminuto))
 
+#estas son las operaciones básicas iniciales del programa
