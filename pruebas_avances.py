@@ -7,7 +7,7 @@ def tiempo_pagina(pbpagina,rapidez_lector):
 
 pbminuto = rapidez_lector(200,40)
 
-
+#pruebas
 print("caso 1 valor %s,  es %r debe ser %r" % ((200,40), rapidez_lector(200,40), 300 ))
 print("caso 2 valor %s,  es %r debe ser %r" % ((800,40), rapidez_lector(800,40), 1200 ))
 print("caso 3 valor %s,  es %r debe ser %r" % ((350,45), rapidez_lector(350,45), 466.66 ))
