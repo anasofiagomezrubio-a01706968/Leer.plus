@@ -50,6 +50,29 @@ def libro_terminado(dias_terminar): #función para retroalimentar al lector sobr
         terminado = ("no has empezado el libro")
         print (terminado)
 
+# Aquí empieza la parte del programa para que los usuarios mantengan un registro de los libros que han leido y los que desean leer.
+libros_del_año=int(input("¿Cuántos libros quieres leer este año?"))
+libros_leidos=int(input("¿Cuántos libros has leido?"))
+libros_leer=libros_del_año - libros_leidos
+
+def lista_libros_leidos(año,leidos):
+    libros_terminados=[]
+    libro=""
+    while (leidos<año):
+        libro=str(input("¿Qué libro deseas agregar a tu lista de leidos?"))
+        libros_terminados.append(libro)
+        leidos=leidos+1
+    return "Tu lista de libros leidos es" , libros_terminados
+
+def lista_libros_por_leer(año,leer):
+    libros_por_leer=[]
+    libro=""
+    while (leer < año):
+        libro = str(input("¿Qué libro quieres agregar a tu lista de libros por leer?"))
+        libros_por_leer.append(libro)
+        leer=leer+1
+    return "Tu lista de libros por leer es" , libros_por_leer
+
             
 #prueba
 print("¿Cúantas palabras tiene el texto?")
@@ -76,6 +99,9 @@ print("Si lees diario, tardarás",dias_para_terminar, "dias, para acabar tu libr
 
 
 print(libro_terminado(dias_para_terminar))
+
+print("Te faltan leer" , libros_leer , "libros" , "," , lista_libros_leidos(libros_del_año,libros_leidos), "y" , lista_libros_por_leer(libros_del_año,libros_leer) )
+
 
 
 
