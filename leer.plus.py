@@ -4,10 +4,19 @@ Esta primera parte del programa sirve para calcular la cantidad
 de días que le tomaría a un usuario leer un libro considerando su
 rapidez como lector y la cantidad de tiempo que le gustarúa leer por día.
 """
+#biblioteca
+import random
+
+"""
+Esta biblioteca será usada para elegir un libro al azar de una lista.
+La lista es introducida por el usuario
+Se usa random.choice() para realizar la selección
+"""
 
 """
 ==========funciones de rapidez de lector y tiempo para leer un libro==============
 """
+
 
 def rapidez_lector(palabras,segundos):
     """
@@ -98,7 +107,17 @@ def lista_libros_por_leer(año,leer):
         libro = str(input("¿Qué libro quieres agregar a tu lista de libros por leer?"))
         libros_por_leer.append(libro)
         leer=leer+1
-    return "Tu lista de libros por leer es" , libros_por_leer
+    return libros_por_leer
+
+def seleccion_libro(lista):
+    """
+    Función para seleccionar un libro de la lista de libros por leer
+    La selección es aleatoria.
+    Se hace uso de la biblioteca externa random
+    """
+    if (len(lista)>1):
+        seleccion=random.choice(lista)
+        return seleccion
 
 
 def lista_libros_leidos(leidos):
@@ -114,7 +133,7 @@ def lista_libros_leidos(leidos):
             libros_terminados.append(libro)
             acum=acum+1
         return libros_terminados
-
+       
 def genero_libros(lista):
     """
     Función para crear lista con los géneros de los libros leídos.
@@ -166,7 +185,7 @@ declaradas anteriormente dependiendo de la elección del usuario
 print("Si quieres ver cuanto tardarías en leer un libro y tu rapidez de lector ingresa 1")
 print("Si quieres calcular cuántos libros te faltan por leer para alcanzaar tu meta anual y crear tu lista de libros que deseas leer, ingresa 2")
 print("Si quieres ingresar los libros que ya leíste con su respectivo género y saber cuál es tu género favorito, ingresa 3")
-opcion = int(input())
+opcion = int(input("Opcion"))
 if (opcion == 1):
     """
     opción para calcular rapidez de lector
@@ -211,6 +230,8 @@ if (opcion == 2):
     """
     opcion para determinar cuantos lbros faltan por leer
     crea una lista de los libros que el usuario desea leer
+    y escoger un libro a leer en base a la lista de libros
+    por leer
     """
     libros_del_año=int(input("¿Cuántos libros quieres leer este año?"))
     libros_leidos=int(input("¿Cuántos libros has leido?"))
@@ -218,9 +239,15 @@ if (opcion == 2):
         print ("tus valores no se pueden utilizar en este programa, intenta otra vez, acuerda de no usar números negativos!")
         libros_del_año=int(input("¿Cuántos libros quieres leer este año?"))
         libros_leidos=int(input("¿Cuántos libros has leido?"))
+    
     libros_leer=libros_del_año - libros_leidos
     print("Para alcanzar tu meta del año, te faltan leer " ,libros_leer)
-    print(lista_libros_por_leer(libros_del_año,libros_leidos))
+    libros = lista_libros_por_leer(libros_del_año,libros_leidos)
+    print("Tu lista de libros por leer es", libros)
+    
+    print("¿No sabes qué libro leer?, el programa elige por ti")
+    print("La sugerencia para tu próximo libro es", seleccion_libro(libros))
+    
 
 if (opcion == 3):
     """
