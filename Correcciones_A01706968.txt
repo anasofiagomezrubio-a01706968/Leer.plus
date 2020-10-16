@@ -1,0 +1,29 @@
+=========================================Corrección 1==============================================
+Sub-Competencia: Usa herramientas de control de versiones.
+
+Error original:Se habían subido varios archivos conforme se iban haciendo los avances
+y no se hacían commits representativos.
+
+Cambio realizado:Se borraron los archivos de código extra y se junto en un solo archivo de código.
+También se agregaron commits con información mas detallada sobre los avances que se hicieron.
+
+    
+=========================================Corrección 2===============================================
+Sub-Competencia: 
+Usa una biblioteca de Python extra (a las vistas en el temario) que investiga por su cuenta 
+
+Error original:No se hizo uso de biblioteca extra.
+
+Cambio realizado:Se incluyó una función que hace uso de la biblioteca Random
+
+Líneas de código donde se ve la corrección: 7-8 y 112-120
+
+==========================================Corrección 3==============================================
+
+Sub-Competencia: Explica cómo funciona la biblioteca extra.
+
+Error original:No se usó una biblioteca por lo tanto no había explicación de la misma.
+
+Cambio realizado:Se agregó una explicación sobre la biblioteca recién añadida
+
+Líneas de código donde se ve la corrección: 11-13 y 114-116
