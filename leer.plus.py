@@ -155,7 +155,21 @@ def generos_de_libros(lista,lista_generos):
     """
     libros_y_generos=[[lista],[lista_generos]]
     return libros_y_generos
+ros_del_año <= 0 or libros_leidos < 0 ):
+        print ("tus valores no se pueden utilizar en este programa, intenta otra vez, acuerda de no usar números negativos!")
+        libros_del_año=int(input("¿Cuántos libros quieres leer este año?"))
+        libros_leidos=int(input("¿Cuántos libros has leido?"))
+    libros_leer=libros_del_año - libros_leidos
+    
+    mis_libros=lista_libros_leidos(libros_leidos)
+    generos=genero_libros(mis_libros)
+    libros_y_generos= generos_de_libros(mis_libros,generos)
+    
+    print("Los libros que has leído con su género correspondiente es " , libros_y_generos)
+    print(genero_favorito(generos))
 
+if (opcion != 1 and opcion != 2 and opcion != 3):
+    print("Opción no válida")
 
 
 def genero_favorito(generos):
@@ -202,9 +216,9 @@ if (opcion == 1):
         print("La rapidez de lector es,",rapidez,"palabras por minuto")
     
         print("Aproximadamente, ¿Cuántas palabras tiene una página de tu libro?")
-        ppagina=int(input())
+        pbpagina=int(input())
         if (pbpagina > 0 ):
-            tenpagina=tiempo_pagina(ppagina,rapidez)
+            tenpagina=tiempo_pagina(pbpagina,rapidez)
             print("Te tardarás",tenpagina,"minutos, en cada página")
 
             print("¿Cuántas páginas tiene tu libro?")
@@ -273,4 +287,3 @@ if (opcion == 3):
 
 if (opcion != 1 and opcion != 2 and opcion != 3):
     print("Opción no válida")
-    
